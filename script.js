@@ -179,15 +179,14 @@ const khakassToRu = {
 
 let isRussianToKhakass = true; 
 
-function translatetext(text, dictionary) {
+function translateText(text, dictionary) {
     return text.split(" ").map(word => {
-        const cleanedword = word.replace(/[.,!?;:]/g, '');
-        const translatedword = dictionary[cleanedword.toLowerCase()] || cleanedword;
+        const cleanedWord = word.replace(/[.,!?;:]/g, '');
+        const translatedWord = dictionary[cleanedWord.toLowerCase()] || cleanedWord;
         const punctuation = word.match(/[.,!?;:]/g); 
-        return translatedword + (punctuation ? punctuation.join('') : '');
+        return translatedWord + (punctuation ? punctuation.join('') : '');
     }).join(" ");
 }
-
 document.getElementById('translateButton').addEventListener('click', function () {
     const inputText = document.getElementById('inputText').value;
     const outputText = document.getElementById('outputText');
@@ -198,7 +197,6 @@ document.getElementById('translateButton').addEventListener('click', function ()
         outputText.value = translateText(inputText, khakassToRu);
     }
 });
-
 document.getElementById('switchLanguageButton').addEventListener('click', function () {
     isRussianToKhakass = !isRussianToKhakass; 
     const inputText = document.getElementById('inputText');
@@ -214,7 +212,6 @@ document.getElementById('switchLanguageButton').addEventListener('click', functi
     inputText.value = "";
     outputText.value = "";
 });
-
 document.querySelectorAll('.char-button').forEach(button => {
     button.addEventListener('click', function () {
         const char = this.getAttribute('data-char');
