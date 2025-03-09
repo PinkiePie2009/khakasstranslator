@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cӧстік - Хакасский Переводчик</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Сӧстік</h1>
+        <p>Легкий и быстрый перевод с хакасского и на хакасский</p>
+    </header>
+    <main>
+        <textarea id="inputText" placeholder="Введите текст для перевода..."></textarea>
+        <div class="special-chars">
+            <button class="char-button" data-char="i">i</button>
+            <button class="char-button" data-char="ӧ">ӧ</button>
+            <button class="char-button" data-char="ӱ">ӱ</button>
+            <button class="char-button" data-char="ң">ң</button>
+            <button class="char-button" data-char="ғ">ғ</button>
+            <button class="char-button" data-char="ӌ">ӌ</button>
+        </div>
+        <div class="controls">
+            <button id="switchLanguageButton">Переключить направление</button>
+            <button id="translateButton">Перевести</button>
+        </div>
+        <textarea id="outputText" readonly placeholder="Результат перевода..."></textarea>
+    </main>
+    <footer>
+        <p>© 2025 Nikita Medvedev.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
